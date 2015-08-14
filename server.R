@@ -24,7 +24,7 @@ shinyServer(function(input, output) {
       disc_name = "Civil Engineering"
     }    
     else if(input$discipline == 5){
-      df = chem
+      df = chee
       disc_name = "Chemical Engineering"
     } 
     else if(input$discipline == 6){
