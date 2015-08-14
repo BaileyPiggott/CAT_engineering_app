@@ -10,7 +10,7 @@ shinyUI(fluidPage(
   headerPanel("Engineering CAT Scores"), 
   
   sidebarPanel(
-    selectInput("discipline", "Discipline:",
+    selectInput("discipline", "Choose Discipline:",
                 c("Mechanical" = 1, 
                   "Electrical" = 2, 
                   "Computer" = 3,
@@ -24,7 +24,20 @@ shinyUI(fluidPage(
                 )#end options
     ),#end selectInput
     
-    downloadButton("downloadPDF", "Download PDF")
+    downloadButton("downloadPDF", "Download Plot"),
+    
+    #text description of app ------------------------
+    
+    br(),br(), 
+    h4("About This App"),
+    p("This app displays the CAT (Critical Thinking Assessment Test) scores of engineering students from each 
+      of the 10 disciplines. This test has a maximum score of 36."),
+    p("First and second year samples are the same students who wrote the CAT test both years."),
+    br(),
+    p("Learn more about the HEQCO Learning Outcomes Assessment Project", 
+      a("here.", href = "http://www.queensu.ca/qloa/"))
+    # end text description    
+    
   ),#end sidebar panel
   
   mainPanel(
